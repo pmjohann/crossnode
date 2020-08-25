@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.12
 
 # COPY COMPILER HELPER SCRIPT
 COPY docker-entrypoint.sh /docker-entrypoint.sh
@@ -10,7 +10,7 @@ RUN chmod +x /docker-entrypoint.sh && \
 
 # SET DEFAULT VALUES FOR BUILDING
 ENV ENTRYPOINT index.js
-ENV NODE_VERSION 12.13.0
+ENV NODE_VERSION 12.16.2
 
 # SET BUILD DIR AS WORKDIR
 WORKDIR /build
