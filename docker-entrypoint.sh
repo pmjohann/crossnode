@@ -21,3 +21,7 @@ fi
 if echo $1 | grep "linux" > /dev/null; then
     nexe -i "/cleanbuild/$ENTRYPOINT" -t "linux-x64-$NODE_VERSION" -o "/build/linux64"
 fi
+
+if echo $1 | grep "alpine" > /dev/null; then
+    nexe -i "/cleanbuild/$ENTRYPOINT" -t "alpine-x64-12.9.1" -o "/build/alpine64"
+fi
